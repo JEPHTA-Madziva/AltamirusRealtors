@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALTAMIRUS REALTORS — Luxury Homes & Commercial Properties</title>
+  <meta name="description" content="ALTAMIRUS REALTORS — Luxurious, trusted real estate services. Explore premium properties, request viewings, and contact expert agents." />
+  <link rel="icon" href="Icon_Logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+    <nav class="brand">
+      <figure class="logo-mark"><img src="Icon_Logo.png" alt=""></figure>
+      <ul class="brand-data">
+        <h1>ALTAMIRUS REALTORS</h1>
+        <p>Building Today Changing Tommorow</p>
+      </ul>
+    </nav>
+
+    <nav class="header-nav">
+      <button onclick="document.getElementById('listings').scrollIntoView({behavior:'smooth'});">Listings</button>
+      <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});">About</button>      
+      <button onclick="document.getElementById('agents').scrollIntoView({behavior:'smooth'});">Agents</button>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Contact</button>
+    </nav>
+
+    <nav class="header-misc">
+      <!-- <button onclick="document.getElementById('login').scrollIntoView({behavior:'smooth'});">Login</button> -->
+      <button class="cta sell" popovertarget="swu">
+        <p>Sell with us</p>
+      </button>      
+    </nav>
+
+    <button class="burger menu-toggle" onclick="burger.hidden^=1"><i id="closed">☰</i></button>
+
+    <nav id="burger" class="burger-nav" hidden>
+      <figure><img src="First Logo.png" alt=""></figure>
+      <button onclick="document.getElementById('listings').scrollIntoView({behavior:'smooth'});">Listings</button>
+      <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});">About</button>      
+      <button onclick="document.getElementById('agents').scrollIntoView({behavior:'smooth'});">Agents</button>
+      <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <figure class="hero-main">
+      <h2 class="zoomIn">Find the home that defines you.</h2>
+      <!--<p class="muted">ALTAMIRUS REALTORS specialises in premium residential and commercial properties. Explore curated listings, schedule private viewings, and partner with agents who understand the market.</p>-->
+    </figure>
+
+    <article class="hero-cta">
+      <button class="cta listing zoomIn" onclick="document.getElementById('listings').scrollIntoView({behavior:'smooth'});">
+        <p>Explore Listings</p> 
+        <i class="icon">→</i>
+      </button>
+      <button class="cta book zoomIn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+        <p>Get in Touch</p> 
+        <i class="icon">→</i>
+      </button>     
+      <button class="cta sell zoomIn" popovertarget="swu">
+        <p>Sell with us</p> 
+        <i class="icon">&dollar;</i>
+      </button>
+    </article>
+    
+    <aside id="swu" popover="">
+      <article class="inquiry">
+        <h4 class="sub-head">SELL WITH US</h4>
+        <button id="close-btn" popovertarget="swu" popovertargetaction="hide">Close</button>
+  
+        <form id="listForm">
+          <input id="name" placeholder="Full name" required />
+          <input id="phone" placeholder="Phone number" required />
+          <input id="location" placeholder="Location to listing" required />
+          <input id="email" placeholder="Email address" style="margin-top:10px" required />
+          <textarea id="message" placeholder="How can we help?"></textarea>
+          <nav>
+            <button class="btn-outline" type="reset">Reset</button>
+            <button class="cta" id="sendContact">Request Appraisal</button>
+          </nav>
+        </form>
+      </article>
+    </aside>
+
+  </main>
+
+  <section id="about">     
+    <article class="about">
+      <p class="summary"> 
+        <strong class="sum-name">ALTAMIRUS REALTORS</strong> <br> 
+        is founded on a commitment to premium service — 
+        blending market expertise, local insight, and modern marketing to showcase your property the way it deserves. <br> 
+        Our agents prioritise confidentiality, accurate valuations and results.
+      </p>
+    </article>
+  
+    <figure class="credit">
+      <p class="cred establish"><strong>2008</strong>Trusted since</p>
+      <p class="cred sales"><strong>3000+</strong> properties sold</p>
+      <p class="cred agents"><strong>50+</strong> expert agents</p>
+    </figure>
+    
+    
+    <aside class="sidebar">
+      <h4 class= "title">Say Hi</h4>
+      <p class="ctaCalls">Email us at: 
+        <a class="emailLink" href="mailto:hello@altamirus.co.za"><strong class="email">hello@altamirus.co.za</strong></a> 
+        <br> or call: 
+        <strong class="cell">+27 82 555 1234</strong>
+      </p>
+      <button class="cta">Speak to an agent &phone;</button>
+    </aside>
+  </section>
+
+  <section id="listings">
+    <h3>Services</h3>
+    <article class="services">
+      <figure class="service">
+        <h5 class="title">Property Sales</h5>
+        <hr>
+        <p class="service-description">Expert assistance for buying and selling residential and commercial properties.</p>
+      </figure>
+
+      <figure class="service">
+        <h5 class="title">Letting/Rentals</h5>
+        <hr>
+        <p class="service-description">Comprehensive tenant placement and property rental management services.</p>
+      </figure>
+
+      <figure class="service">
+        <h5 class="title">Body Corporate Mnangement</h5>
+        <hr>
+        <p class="service-description">Efficient administration and maintenance for sectional title schemes and HOAs.</p>
+      </figure>
+
+      <figure class="service">
+        <h5 class="title">Property Valuations</h5>
+        <hr>
+        <p class="service-description">Accurate and professional appraisals for market value and financial planning.</p>
+      </figure>
+
+      <figure class="service">
+        <h5 class="title">Management of student residences</h5>
+        <hr>
+        <p class="service-description">Specialized management of student accommodation and campus facilities.</p>
+      </figure>
+
+      <figure class="service">
+        <h5 class="title">Facility Management</h5>
+        <hr>
+        <p class="service-description">Integrated management of buildings and infrastructure for optimal functionality.</p>
+      </figure>
+    </article>
+  </section>
+  
+  <!--<section id="agents">
+    <h3 class="heading">Our Agents</h3>
+      <figure class="agent">
+        <img class="image" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="agent">
+        <article class="agent-id">
+          <h4 class="name">Thabo Nkosi</h4>
+          <small class="role">Commercial Properties Lead</small>
+        </article>
+        <article class="agent-info">
+          
+        </article>
+      </figure>
+  </section> -->
+
+  <section id="contact" class="section container">
+    <h3>Get in touch</h3>
+    <p class="summary"> <strong>Whether you’re buying, selling or investing — our team is here to help.</strong> <br> Send us a message and an agent will respond within one business day.</p>
+
+    <form id="contactForm">
+      <input id="name" placeholder="Full name" required />
+      <input id="phone" placeholder="Phone number" required />
+      <input id="email" placeholder="Email address" style="margin-top:10px" required />
+      <textarea id="message" placeholder="How can we help?"></textarea>
+      <nav class="con-cta">
+        <button class="rst" type="reset">Reset</button>
+        <button class="cta" id="sendContact">Send message</button>
+      </nav>
+    </form>
+
+    <aside id="contact-card">
+        <h4>Say Hi</h4>
+        <p class="locations">&bullet; Cape Town • Johannesburg • Durban</p>
+        <p class="invite">Follow us on social media for exclusive listings and market updates.</p>
+        <ul class="con-cards">
+          <li class="btn-outline cel">Cel: [+27] 012 345 6789</div>
+          <li class="btn-outline tel">Tel: 011 012 345 9876</div>
+        </ul>
+    </aside>
+  </section>
+
+  <footer class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>ALTAMIRUS REALTORS</h4>
+        <p class="legal">Registered Estate Agency • FSP 12345 • All rights reserved © <span id="year"></span></p>
+      </div>
+      <div class="legal">Terms • Privacy • Cookie policy</div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
